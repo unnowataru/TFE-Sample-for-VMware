@@ -1,7 +1,7 @@
 #Define Variables for Platform
 variable "vsphere_user" {}           #vsphereのユーザー名
 variable "vsphere_password" {}       #vsphereのパスワード
-variable "vCenter_server" {}         #vCenterのFQDN/IPアドレス
+variable "vcenter_server" {}         #vCenterのFQDN/IPアドレス
 variable "vsphere_datacenter" {}     #vsphereのデータセンター
 variable "vsphere_datastore" {}      #vsphereのデータストア
 variable "vsphere_cluster" {}        #vsphereのクラスター
@@ -19,7 +19,7 @@ variable "prov_mem_num" {}           #プロビジョニングする仮想マシ
 provider "vsphere" {
   user                   = var.vsphere_user
   password               = var.vsphere_password
-  vsphere_server         = var.vCenter_server
+  vsphere_server         = var.vcenter_server
   allow_unverified_ssl   = true
 }
 
