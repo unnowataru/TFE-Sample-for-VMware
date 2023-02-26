@@ -13,3 +13,4 @@ prov_vm_num         = 1                             #プロビジョニングす
 prov_vmname_prefix  = "TFVM"                        #プロビジョニングする仮想マシンの接頭語
 prov_cpu_num        = 2                             #プロビジョニングする仮想マシンのCPUの数
 prov_mem_num        = 4096                          #プロビジョニングする仮想マシンのメモリのMB
+prov_firmware       = "bios"                        #プロビジョニングする仮想マシンのファームウェア
