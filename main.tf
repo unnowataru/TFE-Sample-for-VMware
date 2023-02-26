@@ -13,6 +13,7 @@ variable "prov_vm_num" {}            #プロビジョニングする仮想マシ
 variable "prov_vmname_prefix" {}     #プロビジョニングする仮想マシンの接頭語
 variable "prov_cpu_num" {}           #プロビジョニングする仮想マシンのCPUの数
 variable "prov_mem_num" {}           #プロビジョニングする仮想マシンのメモリのMB
+variable "prov_firmware" {}          #プロビジョニングする仮想マシンのファームウェア
 
 
 #Provider
@@ -61,6 +62,7 @@ resource "vsphere_virtual_machine" "vm" {
   guest_id = data.vsphere_virtual_machine.template.guest_id
 
   scsi_type = data.vsphere_virtual_machine.template.scsi_type
+  firmware = var.prov_firmware
 
   network_interface {
     network_id   = data.vsphere_network.network.id
